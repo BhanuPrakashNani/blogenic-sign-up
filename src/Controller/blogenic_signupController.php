@@ -17,4 +17,9 @@ class blogenic_signupController extends ControllerBase{
 		return[
 			'type' => 'markup', 'markup' => $markup,];
 	}
+	
+	function blogenic_signup_user_login(\Drupal\user\UserInterface $account) {
+  drupal_set_message(t('Hi %name! Welcome to our website', ['%name' => $account->getDisplayName()]));
+  return new RedirectResponse(\Drupal::url('<front>', [], ['absolute' => TRUE]));
+}
 }
