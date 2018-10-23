@@ -6,6 +6,7 @@
 
 namespace Drupal\blogenic_signup\Controller;
 use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\HttpFoundation\RedirectResponse; 
 
 class blogenic_signupController extends ControllerBase{
 	public function signup(){
